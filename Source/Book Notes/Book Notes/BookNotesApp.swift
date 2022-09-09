@@ -11,7 +11,7 @@ import SwiftUI
 struct BookNotesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
