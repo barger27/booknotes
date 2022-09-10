@@ -10,6 +10,12 @@ import SwiftUI
 struct AddBookView: View {
     @StateObject private var viewModel = AddBookView.ViewModel()
     
+    init() {}
+    
+    init(viewModel: AddBookView.ViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
     var body: some View {
         VStack {
             HStack {
@@ -22,14 +28,15 @@ struct AddBookView: View {
                     .padding()
             }
             List(viewModel.searchResults) { book in
-                
+                BookSummaryRow(book: book)
             }
-        }
+        }.navigationTitle("Add Book")
     }
 }
 
 struct AddBookView_Previews: PreviewProvider {
     static var previews: some View {
-        AddBookView()
+        let viewModel = AddBookView.ViewModel(bookList: MockBookService.defaultBooks)
+        return AddBookView(viewModel: viewModel)
     }
 }

@@ -15,6 +15,6 @@ extension Container {
     
     // Data Access Objects
     static let bookSearchDAO = Factory(scope: .singleton) {
-        GoogleBookSearchDAO(googleAPI: "https://www.googleapis.com/books/v1/volumes?q=") as BookSearchDAOProtocol
+        GoogleBookSearchDAO(googleAPI: "https://www.googleapis.com/books/v1/volumes?maxResults=40&q=") as BookSearchDAOProtocol
     }
 }

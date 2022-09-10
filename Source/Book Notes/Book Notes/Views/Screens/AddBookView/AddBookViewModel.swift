@@ -35,6 +35,11 @@ extension AddBookView {
         }
         
         
+        init(bookList:[Book]) {
+            searchResults = bookList
+        }
+        
+        
         private func performSearch(search:String) {
             Task {
                 do {

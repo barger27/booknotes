@@ -38,6 +38,8 @@
 		947E2B3828CCCC9500970170 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9466AFB928CB59520093EB04 /* Note.swift */; };
 		947E2B3928CCCC9500970170 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9466AFB728CB53540093EB04 /* Book.swift */; };
 		947E2B3A28CCCC9B00970170 /* NoteServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E2B2D28CCC10A00970170 /* NoteServiceProtocol.swift */; };
+		94AC290228CD1B9C00F0C772 /* SwiftDateStatic in Frameworks */ = {isa = PBXBuildFile; productRef = 94AC290128CD1B9C00F0C772 /* SwiftDateStatic */; };
+		94AC290628CD316F00F0C772 /* BookSummaryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AC290528CD316F00F0C772 /* BookSummaryRow.swift */; };
 		94F4EEFD28CAD92200C15E4A /* BookNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F4EEFC28CAD92200C15E4A /* BookNotesApp.swift */; };
 		94F4EEFF28CAD92200C15E4A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F4EEFE28CAD92200C15E4A /* HomeView.swift */; };
 		94F4EF0128CAD92300C15E4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94F4EF0028CAD92300C15E4A /* Assets.xcassets */; };
@@ -75,6 +77,7 @@
 		947E2B2D28CCC10A00970170 /* NoteServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteServiceProtocol.swift; sourceTree = "<group>"; };
 		947E2B3228CCCB8600970170 /* AddBookViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewModelTest.swift; sourceTree = "<group>"; };
 		947E2B3528CCCC3100970170 /* MockBookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBookService.swift; sourceTree = "<group>"; };
+		94AC290528CD316F00F0C772 /* BookSummaryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSummaryRow.swift; sourceTree = "<group>"; };
 		94F4EEF928CAD92200C15E4A /* Book Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F4EEFC28CAD92200C15E4A /* BookNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookNotesApp.swift; sourceTree = "<group>"; };
 		94F4EEFE28CAD92200C15E4A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -90,6 +93,7 @@
 			files = (
 				9400695428CADFDC008D0AA2 /* GRDB in Frameworks */,
 				9400695728CAE05A008D0AA2 /* Factory in Frameworks */,
+				94AC290228CD1B9C00F0C772 /* SwiftDateStatic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +203,7 @@
 		947E2B2228CCB53100970170 /* AddBookView */ = {
 			isa = PBXGroup;
 			children = (
+				94AC290428CD315800F0C772 /* Controls */,
 				947E2B2328CCB55600970170 /* AddBookView.swift */,
 				947E2B2528CCB6C400970170 /* AddBookViewModel.swift */,
 			);
@@ -234,6 +239,14 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		94AC290428CD315800F0C772 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				94AC290528CD316F00F0C772 /* BookSummaryRow.swift */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 		94F4EEF028CAD92200C15E4A = {
@@ -306,6 +319,7 @@
 			packageProductDependencies = (
 				9400695328CADFDC008D0AA2 /* GRDB */,
 				9400695628CAE05A008D0AA2 /* Factory */,
+				94AC290128CD1B9C00F0C772 /* SwiftDateStatic */,
 			);
 			productName = "Book Notes";
 			productReference = 94F4EEF928CAD92200C15E4A /* Book Notes.app */;
@@ -360,6 +374,7 @@
 			packageReferences = (
 				9400695228CADFDC008D0AA2 /* XCRemoteSwiftPackageReference "GRDB" */,
 				9400695528CAE05A008D0AA2 /* XCRemoteSwiftPackageReference "Factory" */,
+				94AC290028CD1B9C00F0C772 /* XCRemoteSwiftPackageReference "SwiftDate" */,
 			);
 			productRefGroup = 94F4EEFA28CAD92200C15E4A /* Products */;
 			projectDirPath = "";
@@ -407,6 +422,7 @@
 				9440E56B28CCEB6900E66A10 /* BooksResultDTO.swift in Sources */,
 				947E2B2A28CCBFA600970170 /* BookServiceProtocol.swift in Sources */,
 				9466AFB428CB4B1F0093EB04 /* BookRow.swift in Sources */,
+				94AC290628CD316F00F0C772 /* BookSummaryRow.swift in Sources */,
 				947E2B2C28CCC09E00970170 /* BookNotesBookService.swift in Sources */,
 				947E2B2828CCBED000970170 /* Factory.swift in Sources */,
 				9466AFB828CB53540093EB04 /* Book.swift in Sources */,
@@ -708,6 +724,14 @@
 				kind = branch;
 			};
 		};
+		94AC290028CD1B9C00F0C772 /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -720,6 +744,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9400695528CAE05A008D0AA2 /* XCRemoteSwiftPackageReference "Factory" */;
 			productName = Factory;
+		};
+		94AC290128CD1B9C00F0C772 /* SwiftDateStatic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94AC290028CD1B9C00F0C772 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDateStatic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
