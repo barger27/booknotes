@@ -10,7 +10,8 @@ import Foundation
 
 extension HomeView {
     class ViewModel: ObservableObject {
-        @Published var searchText = ""
+        @Published var noteSearchText = ""
+        @Published var isShowingAddBook = false
         @Published private(set) var activeBooks:[AnyHashable] = []
         @Published private(set) var wishlistBooks:[AnyHashable] = []
         @Published private(set) var archivedBooks:[AnyHashable] = []

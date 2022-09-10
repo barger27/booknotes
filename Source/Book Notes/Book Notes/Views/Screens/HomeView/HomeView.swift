@@ -16,32 +16,29 @@ struct HomeView: View {
                 ZStack(alignment: .center) {
                     Image("OldBooks")
                         .resizable()
-                        .scaledToFill()
-                        .shadow(color: Color.black, radius: 20, x: 10, y: 10)
-                        .frame(height: 200)
+                        .ignoresSafeArea()
+                        .frame(height: 180)
                         
                     TextField("Note Search",
-                              text: $viewModel.searchText)
+                              text: $viewModel.noteSearchText)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .foregroundColor(Color.white)
                         .frame(width: min(UIScreen.main.bounds.size.width * 0.80, 350))
                 }
                 
+                HStack {
+                    Spacer()
+                    NavigationLink("Add Book",
+                                   destination: AddBookView(),
+                                   isActive: $viewModel.isShowingAddBook)
+                        .padding()
+                }
                 List {
                     Section {
                         ForEach(viewModel.activeBooks, id: \.self) { book in
                             BookRow()
                         }
                     } header: {
-                        HStack {
-                            Text("Active Books")
-                            Spacer()
-                            Button {
-                                
-                            } label: {
-                                Image(systemName: "plus.circle.fill")
-                            }
-                        }
+                        Text("Active Books")
                     }
                     Section("Wishlist") {
                         ForEach(viewModel.wishlistBooks, id: \.self) { book in
@@ -57,6 +54,7 @@ struct HomeView: View {
                 .listStyle(.grouped)
             }
             .navigationBarHidden(true)
+            .navigationTitle("Book Library")
         }
     }
 }
