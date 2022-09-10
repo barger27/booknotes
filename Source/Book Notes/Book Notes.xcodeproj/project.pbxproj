@@ -9,28 +9,35 @@
 /* Begin PBXBuildFile section */
 		9400695428CADFDC008D0AA2 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 9400695328CADFDC008D0AA2 /* GRDB */; };
 		9400695728CAE05A008D0AA2 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 9400695628CAE05A008D0AA2 /* Factory */; };
+		9440E55B28CCD56B00E66A10 /* MockBookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E2B3528CCCC3100970170 /* MockBookService.swift */; };
+		9440E55C28CCD5B000E66A10 /* BookNotesBookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E2B2B28CCC09E00970170 /* BookNotesBookService.swift */; };
+		9440E55D28CCD5BA00E66A10 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E2B2328CCB55600970170 /* AddBookView.swift */; };
+		9440E55E28CCD5BA00E66A10 /* AddBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E2B2528CCB6C400970170 /* AddBookViewModel.swift */; };
+		9440E55F28CCDA7700E66A10 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E2B2728CCBED000970170 /* Factory.swift */; };
 		9466AFB428CB4B1F0093EB04 /* BookRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9466AFB328CB4B1F0093EB04 /* BookRow.swift */; };
 		9466AFB628CB51360093EB04 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9466AFB528CB51360093EB04 /* HomeViewModel.swift */; };
 		9466AFB828CB53540093EB04 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9466AFB728CB53540093EB04 /* Book.swift */; };
 		9466AFBA28CB59520093EB04 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9466AFB928CB59520093EB04 /* Note.swift */; };
 		947E2B2428CCB55600970170 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E2B2328CCB55600970170 /* AddBookView.swift */; };
 		947E2B2628CCB6C400970170 /* AddBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E2B2528CCB6C400970170 /* AddBookViewModel.swift */; };
+		947E2B2828CCBED000970170 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E2B2728CCBED000970170 /* Factory.swift */; };
+		947E2B2A28CCBFA600970170 /* BookServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E2B2928CCBFA600970170 /* BookServiceProtocol.swift */; };
+		947E2B2C28CCC09E00970170 /* BookNotesBookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E2B2B28CCC09E00970170 /* BookNotesBookService.swift */; };
+		947E2B2E28CCC10A00970170 /* NoteServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E2B2D28CCC10A00970170 /* NoteServiceProtocol.swift */; };
+		947E2B3328CCCB8600970170 /* AddBookViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E2B3228CCCB8600970170 /* AddBookViewModelTest.swift */; };
+		947E2B3628CCCC3100970170 /* MockBookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E2B3528CCCC3100970170 /* MockBookService.swift */; };
+		947E2B3728CCCC6000970170 /* BookServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E2B2928CCBFA600970170 /* BookServiceProtocol.swift */; };
+		947E2B3828CCCC9500970170 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9466AFB928CB59520093EB04 /* Note.swift */; };
+		947E2B3928CCCC9500970170 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9466AFB728CB53540093EB04 /* Book.swift */; };
+		947E2B3A28CCCC9B00970170 /* NoteServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E2B2D28CCC10A00970170 /* NoteServiceProtocol.swift */; };
 		94F4EEFD28CAD92200C15E4A /* BookNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F4EEFC28CAD92200C15E4A /* BookNotesApp.swift */; };
 		94F4EEFF28CAD92200C15E4A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F4EEFE28CAD92200C15E4A /* HomeView.swift */; };
 		94F4EF0128CAD92300C15E4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94F4EF0028CAD92300C15E4A /* Assets.xcassets */; };
 		94F4EF0428CAD92300C15E4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94F4EF0328CAD92300C15E4A /* Preview Assets.xcassets */; };
-		94F4EF0E28CAD92300C15E4A /* Book_NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F4EF0D28CAD92300C15E4A /* Book_NotesTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		94F4EF0A28CAD92300C15E4A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 94F4EEF128CAD92200C15E4A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 94F4EEF828CAD92200C15E4A;
-			remoteInfo = "Book Notes";
-		};
-		94F4EF1428CAD92300C15E4A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 94F4EEF128CAD92200C15E4A /* Project object */;
 			proxyType = 1;
@@ -46,14 +53,18 @@
 		9466AFB928CB59520093EB04 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		947E2B2328CCB55600970170 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		947E2B2528CCB6C400970170 /* AddBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewModel.swift; sourceTree = "<group>"; };
+		947E2B2728CCBED000970170 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		947E2B2928CCBFA600970170 /* BookServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookServiceProtocol.swift; sourceTree = "<group>"; };
+		947E2B2B28CCC09E00970170 /* BookNotesBookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookNotesBookService.swift; sourceTree = "<group>"; };
+		947E2B2D28CCC10A00970170 /* NoteServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteServiceProtocol.swift; sourceTree = "<group>"; };
+		947E2B3228CCCB8600970170 /* AddBookViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewModelTest.swift; sourceTree = "<group>"; };
+		947E2B3528CCCC3100970170 /* MockBookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBookService.swift; sourceTree = "<group>"; };
 		94F4EEF928CAD92200C15E4A /* Book Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F4EEFC28CAD92200C15E4A /* BookNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookNotesApp.swift; sourceTree = "<group>"; };
 		94F4EEFE28CAD92200C15E4A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		94F4EF0028CAD92300C15E4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94F4EF0328CAD92300C15E4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		94F4EF0928CAD92300C15E4A /* Book NotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Book NotesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		94F4EF0D28CAD92300C15E4A /* Book_NotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book_NotesTests.swift; sourceTree = "<group>"; };
-		94F4EF1328CAD92300C15E4A /* Book NotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Book NotesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,19 +84,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		94F4EF1028CAD92300C15E4A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		9466AFAC28CB45C60093EB04 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				947E2B2928CCBFA600970170 /* BookServiceProtocol.swift */,
+				947E2B2D28CCC10A00970170 /* NoteServiceProtocol.swift */,
+				947E2B2B28CCC09E00970170 /* BookNotesBookService.swift */,
+				947E2B3528CCCC3100970170 /* MockBookService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -151,6 +159,37 @@
 			path = AddBookView;
 			sourceTree = "<group>";
 		};
+		947E2B2F28CCCB3900970170 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				947E2B3028CCCB4200970170 /* Screens */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		947E2B3028CCCB4200970170 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				947E2B3128CCCB4E00970170 /* AddBookView */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		947E2B3128CCCB4E00970170 /* AddBookView */ = {
+			isa = PBXGroup;
+			children = (
+				947E2B3228CCCB8600970170 /* AddBookViewModelTest.swift */,
+			);
+			path = AddBookView;
+			sourceTree = "<group>";
+		};
+		947E2B3428CCCC1300970170 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		94F4EEF028CAD92200C15E4A = {
 			isa = PBXGroup;
 			children = (
@@ -165,7 +204,6 @@
 			children = (
 				94F4EEF928CAD92200C15E4A /* Book Notes.app */,
 				94F4EF0928CAD92300C15E4A /* Book NotesTests.xctest */,
-				94F4EF1328CAD92300C15E4A /* Book NotesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,6 +217,7 @@
 				94F4EEFC28CAD92200C15E4A /* BookNotesApp.swift */,
 				94F4EF0028CAD92300C15E4A /* Assets.xcassets */,
 				94F4EF0228CAD92300C15E4A /* Preview Content */,
+				947E2B2728CCBED000970170 /* Factory.swift */,
 			);
 			path = "Book Notes";
 			sourceTree = "<group>";
@@ -194,7 +233,8 @@
 		94F4EF0C28CAD92300C15E4A /* Book NotesTests */ = {
 			isa = PBXGroup;
 			children = (
-				94F4EF0D28CAD92300C15E4A /* Book_NotesTests.swift */,
+				947E2B3428CCCC1300970170 /* Services */,
+				947E2B2F28CCCB3900970170 /* Views */,
 			);
 			path = "Book NotesTests";
 			sourceTree = "<group>";
@@ -241,24 +281,6 @@
 			productReference = 94F4EF0928CAD92300C15E4A /* Book NotesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		94F4EF1228CAD92300C15E4A /* Book NotesUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 94F4EF2328CAD92300C15E4A /* Build configuration list for PBXNativeTarget "Book NotesUITests" */;
-			buildPhases = (
-				94F4EF0F28CAD92300C15E4A /* Sources */,
-				94F4EF1028CAD92300C15E4A /* Frameworks */,
-				94F4EF1128CAD92300C15E4A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				94F4EF1528CAD92300C15E4A /* PBXTargetDependency */,
-			);
-			name = "Book NotesUITests";
-			productName = "Book NotesUITests";
-			productReference = 94F4EF1328CAD92300C15E4A /* Book NotesUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -273,10 +295,6 @@
 						CreatedOnToolsVersion = 13.4.1;
 					};
 					94F4EF0828CAD92300C15E4A = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 94F4EEF828CAD92200C15E4A;
-					};
-					94F4EF1228CAD92300C15E4A = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = 94F4EEF828CAD92200C15E4A;
 					};
@@ -301,7 +319,6 @@
 			targets = (
 				94F4EEF828CAD92200C15E4A /* Book Notes */,
 				94F4EF0828CAD92300C15E4A /* Book NotesTests */,
-				94F4EF1228CAD92300C15E4A /* Book NotesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -323,13 +340,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		94F4EF1128CAD92300C15E4A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -338,12 +348,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				947E2B2428CCB55600970170 /* AddBookView.swift in Sources */,
+				947E2B2E28CCC10A00970170 /* NoteServiceProtocol.swift in Sources */,
 				947E2B2628CCB6C400970170 /* AddBookViewModel.swift in Sources */,
 				94F4EEFF28CAD92200C15E4A /* HomeView.swift in Sources */,
 				94F4EEFD28CAD92200C15E4A /* BookNotesApp.swift in Sources */,
+				947E2B2A28CCBFA600970170 /* BookServiceProtocol.swift in Sources */,
 				9466AFB428CB4B1F0093EB04 /* BookRow.swift in Sources */,
+				947E2B2C28CCC09E00970170 /* BookNotesBookService.swift in Sources */,
+				947E2B2828CCBED000970170 /* Factory.swift in Sources */,
 				9466AFB828CB53540093EB04 /* Book.swift in Sources */,
 				9466AFB628CB51360093EB04 /* HomeViewModel.swift in Sources */,
+				9440E55B28CCD56B00E66A10 /* MockBookService.swift in Sources */,
 				9466AFBA28CB59520093EB04 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,14 +367,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94F4EF0E28CAD92300C15E4A /* Book_NotesTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94F4EF0F28CAD92300C15E4A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				947E2B3628CCCC3100970170 /* MockBookService.swift in Sources */,
+				947E2B3A28CCCC9B00970170 /* NoteServiceProtocol.swift in Sources */,
+				947E2B3728CCCC6000970170 /* BookServiceProtocol.swift in Sources */,
+				9440E55D28CCD5BA00E66A10 /* AddBookView.swift in Sources */,
+				9440E55F28CCDA7700E66A10 /* Factory.swift in Sources */,
+				9440E55C28CCD5B000E66A10 /* BookNotesBookService.swift in Sources */,
+				947E2B3328CCCB8600970170 /* AddBookViewModelTest.swift in Sources */,
+				947E2B3928CCCC9500970170 /* Book.swift in Sources */,
+				9440E55E28CCD5BA00E66A10 /* AddBookViewModel.swift in Sources */,
+				947E2B3828CCCC9500970170 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,11 +387,6 @@
 			isa = PBXTargetDependency;
 			target = 94F4EEF828CAD92200C15E4A /* Book Notes */;
 			targetProxy = 94F4EF0A28CAD92300C15E4A /* PBXContainerItemProxy */;
-		};
-		94F4EF1528CAD92300C15E4A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 94F4EEF828CAD92200C15E4A /* Book Notes */;
-			targetProxy = 94F4EF1428CAD92300C15E4A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -591,42 +603,6 @@
 			};
 			name = Release;
 		};
-		94F4EF2428CAD92300C15E4A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2FH969U36L;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "greentree.studio.Book-NotesUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Book Notes";
-			};
-			name = Debug;
-		};
-		94F4EF2528CAD92300C15E4A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2FH969U36L;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "greentree.studio.Book-NotesUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Book Notes";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -653,15 +629,6 @@
 			buildConfigurations = (
 				94F4EF2128CAD92300C15E4A /* Debug */,
 				94F4EF2228CAD92300C15E4A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		94F4EF2328CAD92300C15E4A /* Build configuration list for PBXNativeTarget "Book NotesUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				94F4EF2428CAD92300C15E4A /* Debug */,
-				94F4EF2528CAD92300C15E4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -15,10 +15,10 @@ struct AddBookView: View {
             HStack {
                 Text("Search")
                     .padding()
-                
+                    
                 TextField("Book Title or Author", text: $viewModel.bookSearch)
+                    .disableAutocorrection(true)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(width: .infinity)
                     .padding()
             }
             List(viewModel.searchResults) { book in
