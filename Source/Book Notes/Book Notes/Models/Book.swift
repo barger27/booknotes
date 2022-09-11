@@ -17,12 +17,15 @@ struct Book: Identifiable, Equatable, Hashable, Codable, FetchableRecord, Mutabl
     let publishedDate: Date?
     let pageCount:Int?
     let bookCoverURL: URL?
+    let averageRating: Float?
+    let ratingResponses: Int?
     let bookCoverThumbnail: URL?
     var status:BookStatus
     
     init(id:String, title:String, subtitle:String? = nil, description:String, authors:[String] = [],
-         publishedDate: Date? = nil, pageCount:Int? = nil, bookCoverURL:URL? = nil,
-         bookCoverThumbnail:URL? = nil, status:BookStatus = .unlisted)
+         publishedDate: Date? = nil, pageCount:Int? = nil, averageRating: Float? = nil,
+         ratingResponses:Int? = nil, bookCoverURL:URL? = nil, bookCoverThumbnail:URL? = nil,
+         status:BookStatus = .unlisted)
     {
         self.id = id
         self.title = title
@@ -31,6 +34,8 @@ struct Book: Identifiable, Equatable, Hashable, Codable, FetchableRecord, Mutabl
         self.authors = authors
         self.publishedDate = publishedDate
         self.pageCount = pageCount
+        self.averageRating = averageRating
+        self.ratingResponses = ratingResponses
         self.bookCoverURL = bookCoverURL
         self.bookCoverThumbnail = bookCoverThumbnail
         self.status = status

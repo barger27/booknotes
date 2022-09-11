@@ -71,22 +71,8 @@ struct BookDetailsView: View {
                 
                 Text(book.authors.joined(separator: ", "))
                 
-                HStack {
-                    Image(systemName: "star.fill")
-                        .foregroundColor(Color.yellow)
-                    
-                    Image(systemName: "star.fill")
-                        .foregroundColor(Color.yellow)
-                    
-                    Image(systemName: "star.fill")
-                        .foregroundColor(Color.yellow)
-                    
-                    Image(systemName: "star.leadinghalf.filled")
-                        .foregroundColor(Color.yellow)
-                    
-                    Image(systemName: "star")
-                        .foregroundColor(Color.yellow)
-                }.padding()
+                StarRatings(rating: book.averageRating, responses: book.ratingResponses)
+                    .padding()
                 
                 ScrollView {
                     Text(book.description ?? "No description.")

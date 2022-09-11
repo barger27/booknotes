@@ -46,6 +46,8 @@ class BookNotesBookService : BookServiceProtocol {
                      authors: bookDTO.volumeInfo?.authors ?? [],
                      publishedDate: parseDate(dateString: bookDTO.volumeInfo?.publishedDate),
                      pageCount: bookDTO.volumeInfo?.pageCount,
+                     averageRating: bookDTO.volumeInfo?.averageRating,
+                     ratingResponses: bookDTO.volumeInfo?.ratingsCount,
                      bookCoverURL: parseURL(url: bookDTO.volumeInfo?.imageLinks?.smallThumbnail),
                      bookCoverThumbnail: parseURL(url: bookDTO.volumeInfo?.imageLinks?.smallThumbnail))
             }
