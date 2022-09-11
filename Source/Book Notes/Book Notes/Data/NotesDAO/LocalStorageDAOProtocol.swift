@@ -8,5 +8,6 @@
 import Foundation
 
 protocol LocalStorageDAOProtocol {
-    func saveBook(book:inout Book)
+    func readAllBooks() throws -> [Book]
+    func saveBook(book:inout Book) throws
 }

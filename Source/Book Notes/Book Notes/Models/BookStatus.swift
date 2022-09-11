@@ -10,6 +10,7 @@ import Foundation
 enum BookStatus : String, Codable {
     case readList = "read"
     case wishlist = "wish"
+    case archived = "archived"
     case removed  = "deleted"
     case unlisted = "unlisted"
 }

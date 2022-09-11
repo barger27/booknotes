@@ -18,9 +18,17 @@ class BookNotesBookService : BookServiceProtocol {
         self.bookSearchDAO = bookSearchDAO
     }
     
+    func loadAllBooks() async throws -> (active: [Book], wishlist: [Book], archived: [Book]) {
+        let allBooks = try localStorageDAO.readAllBooks()
+        
+        return (active: allBooks.filter { $0.status == .readList },
+                wishlist: allBooks.filter { $0.status == .wishlist },
+                archived: allBooks.filter { $0.status == .archived })
+    }
+    
     func saveBook(book: Book) async throws {
         var editableBook = book
-        localStorageDAO.saveBook(book: &editableBook)
+        try localStorageDAO.saveBook(book: &editableBook)
     }
     
     func searchBook(searchString: String) async throws -> [Book] {
@@ -51,8 +59,12 @@ class BookNotesBookService : BookServiceProtocol {
     }
     
     private func parseDate(dateString:String?) -> Date? {
-        guard let dateValue = dateString, !dateValue.isEmpty else {
+        guard var dateValue = dateString, !dateValue.isEmpty else {
             return nil
+        }
+        
+        if dateValue.count == 4 {
+            dateValue = dateValue + "-01-01"
         }
         
         let dateFormatter = DateFormatter()

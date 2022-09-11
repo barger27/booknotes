@@ -8,7 +8,7 @@
 import Foundation
 import GRDB
 
-struct Book: Identifiable, Equatable, Codable, FetchableRecord, MutablePersistableRecord {
+struct Book: Identifiable, Equatable, Hashable, Codable, FetchableRecord, MutablePersistableRecord {
     let id: String
     let title: String
     let subtitle: String?
@@ -34,6 +34,11 @@ struct Book: Identifiable, Equatable, Codable, FetchableRecord, MutablePersistab
         self.bookCoverURL = bookCoverURL
         self.bookCoverThumbnail = bookCoverThumbnail
         self.status = status
+    }
+    
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
     
     static func == (lhs: Book, rhs: Book) -> Bool {

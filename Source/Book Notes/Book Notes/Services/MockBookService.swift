@@ -22,6 +22,14 @@ class MockBookService : BookServiceProtocol {
         // Do nothing
     }
     
+    func loadAllBooks() async throws -> (active: [Book], wishlist: [Book], archived: [Book]) {
+        let books = MockBookService.defaultBooks
+        
+        return (active: books.filter { $0.status == .readList },
+                wishlist: books.filter { $0.status == .wishlist },
+                archived: books.filter { $0.status == .archived })
+    }
+    
     
     static var defaultBooks = [
         Book(id: "aVkezgEACAAJ",

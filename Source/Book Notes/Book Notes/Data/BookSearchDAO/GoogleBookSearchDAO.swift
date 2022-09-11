@@ -29,7 +29,7 @@ class GoogleBookSearchDAO : BookSearchDAOProtocol {
         
         do {
             (data, response) = try await URLSession.shared.data(from: url)
-            print(response)
+            print(response.debugDescription)
         }
         catch {
             throw GoogleAPIError.transport

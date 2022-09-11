@@ -34,7 +34,20 @@ class SQLiteLocalStorageDAO : LocalStorageDAOProtocol {
     }
     
     
-    func saveBook(book: inout Book) {
+    func readAllBooks() throws -> [Book] {
+        do {
+            let allBooks = try database.read { db in
+                try Book.fetchAll(db)
+            }
+            return allBooks
+        } catch let error {
+            print("Error querying database: \(error)")
+            throw error
+        }
+    }
+    
+    
+    func saveBook(book: inout Book) throws {
         do {
             try database.write { db in
                 try book.save(db)
@@ -42,6 +55,7 @@ class SQLiteLocalStorageDAO : LocalStorageDAOProtocol {
         } catch let error {
             print("Error writing to book table")
             print(error)
+            throw error
         }
     }
     

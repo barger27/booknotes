@@ -12,7 +12,7 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(alignment: .leading) {
                 ZStack(alignment: .center) {
                     Image("OldBooks")
                         .resizable()
@@ -32,29 +32,17 @@ struct HomeView: View {
                                    isActive: $viewModel.isShowingAddBook)
                         .padding()
                 }
-                List {
-                    Section {
-                        ForEach(viewModel.activeBooks, id: \.self) { book in
-                            BookRow()
-                        }
-                    } header: {
-                        Text("Active Books")
-                    }
-                    Section("Wishlist") {
-                        ForEach(viewModel.wishlistBooks, id: \.self) { book in
-                            BookRow()
-                        }
-                    }
-                    Section("Archive") {
-                        ForEach(viewModel.archivedBooks, id: \.self) { book in
-                            BookRow()
-                        }
-                    }
-                }
-                .listStyle(.grouped)
+
+                BookshelfView(title: "Actively Reading", books: $viewModel.activeBooks)
+                BookshelfView(title: "Wishlist", books: $viewModel.wishlistBooks)
+                BookshelfView(title: "Archived", books: $viewModel.archivedBooks)
+                Spacer()
             }
             .navigationBarHidden(true)
             .navigationTitle("Book Library")
+            .onAppear {
+                viewModel.loadBooks()
+            }
         }
     }
 }
