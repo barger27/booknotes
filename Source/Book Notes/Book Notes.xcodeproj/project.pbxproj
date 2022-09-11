@@ -40,6 +40,8 @@
 		947E2B3A28CCCC9B00970170 /* NoteServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E2B2D28CCC10A00970170 /* NoteServiceProtocol.swift */; };
 		94AC290228CD1B9C00F0C772 /* SwiftDateStatic in Frameworks */ = {isa = PBXBuildFile; productRef = 94AC290128CD1B9C00F0C772 /* SwiftDateStatic */; };
 		94AC290628CD316F00F0C772 /* BookSummaryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AC290528CD316F00F0C772 /* BookSummaryRow.swift */; };
+		94AC290828CD4E2800F0C772 /* BookDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AC290728CD4E2800F0C772 /* BookDetailsView.swift */; };
+		94AC290A28CD561900F0C772 /* RoundedRectangleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AC290928CD561900F0C772 /* RoundedRectangleButtonStyle.swift */; };
 		94F4EEFD28CAD92200C15E4A /* BookNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F4EEFC28CAD92200C15E4A /* BookNotesApp.swift */; };
 		94F4EEFF28CAD92200C15E4A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F4EEFE28CAD92200C15E4A /* HomeView.swift */; };
 		94F4EF0128CAD92300C15E4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94F4EF0028CAD92300C15E4A /* Assets.xcassets */; };
@@ -78,6 +80,8 @@
 		947E2B3228CCCB8600970170 /* AddBookViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewModelTest.swift; sourceTree = "<group>"; };
 		947E2B3528CCCC3100970170 /* MockBookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBookService.swift; sourceTree = "<group>"; };
 		94AC290528CD316F00F0C772 /* BookSummaryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSummaryRow.swift; sourceTree = "<group>"; };
+		94AC290728CD4E2800F0C772 /* BookDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsView.swift; sourceTree = "<group>"; };
+		94AC290928CD561900F0C772 /* RoundedRectangleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleButtonStyle.swift; sourceTree = "<group>"; };
 		94F4EEF928CAD92200C15E4A /* Book Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F4EEFC28CAD92200C15E4A /* BookNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookNotesApp.swift; sourceTree = "<group>"; };
 		94F4EEFE28CAD92200C15E4A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 		9466AFB028CB46060093EB04 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				94AC290928CD561900F0C772 /* RoundedRectangleButtonStyle.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				94AC290528CD316F00F0C772 /* BookSummaryRow.swift */,
+				94AC290728CD4E2800F0C772 /* BookDetailsView.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -415,7 +421,9 @@
 				9440E57128CCEE6300E66A10 /* ImageLinksDTO.swift in Sources */,
 				9440E56428CCE8AE00E66A10 /* BookSearchDAOProtocol.swift in Sources */,
 				947E2B2E28CCC10A00970170 /* NoteServiceProtocol.swift in Sources */,
+				94AC290828CD4E2800F0C772 /* BookDetailsView.swift in Sources */,
 				947E2B2628CCB6C400970170 /* AddBookViewModel.swift in Sources */,
+				94AC290A28CD561900F0C772 /* RoundedRectangleButtonStyle.swift in Sources */,
 				94F4EEFF28CAD92200C15E4A /* HomeView.swift in Sources */,
 				94F4EEFD28CAD92200C15E4A /* BookNotesApp.swift in Sources */,
 				9440E56928CCE93A00E66A10 /* GoogleBookSearchDAO.swift in Sources */,

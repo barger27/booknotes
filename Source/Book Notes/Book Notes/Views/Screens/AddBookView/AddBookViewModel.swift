@@ -16,6 +16,8 @@ extension AddBookView {
         
         @Published var bookSearch:String = ""
         @Published var searchResults:[Book] = []
+        @Published var selectedBook:Book? = nil
+        @Published var isBookDetailsPresented = false
         
         private var subscriptions = Set<AnyCancellable>()
         
@@ -37,6 +39,28 @@ extension AddBookView {
         
         init(bookList:[Book]) {
             searchResults = bookList
+        }
+        
+        
+        func onBookSelected(book: Book) {
+            selectedBook = book
+            isBookDetailsPresented = true
+        }
+        
+        
+        func deselectBook() {
+            selectedBook = nil
+            isBookDetailsPresented = false
+        }
+        
+        
+        func addSelectedBookToReadNow() {
+            deselectBook()
+        }
+        
+        
+        func addSelectedBookToWishlist() {
+            deselectBook()
         }
         
         

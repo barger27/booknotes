@@ -29,8 +29,24 @@ struct AddBookView: View {
             }
             List(viewModel.searchResults) { book in
                 BookSummaryRow(book: book)
+                    .onTapGesture {
+                        viewModel.onBookSelected(book: book)
+                    }
             }
-        }.navigationTitle("Add Book")
+        }
+        .navigationTitle("Add Book")
+        .fullScreenCover(isPresented: $viewModel.isBookDetailsPresented) {
+            BookDetailsView(book: viewModel.selectedBook!)
+                .onClose {
+                    viewModel.deselectBook()
+                }
+                .onReadNow {
+                    viewModel.addSelectedBookToReadNow()
+                }
+                .onWishlist {
+                    viewModel.addSelectedBookToWishlist()
+                }
+        }
     }
 }
 
