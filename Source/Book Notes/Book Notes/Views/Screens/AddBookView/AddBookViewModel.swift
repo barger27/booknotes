@@ -72,6 +72,18 @@ extension AddBookView {
         
         
         func addSelectedBookToWishlist() {
+            guard var book = selectedBook else { return }
+            book.status = .wishlist
+            
+            Task {
+                do {
+                    try await bookService.saveBook(book: book)
+                } catch let error {
+                    print("Unable to save book")
+                    print(error)
+                }
+            }
+            
             deselectBook()
         }
         
