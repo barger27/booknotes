@@ -17,4 +17,8 @@ extension Container {
     static let bookSearchDAO = Factory(scope: .singleton) {
         GoogleBookSearchDAO(googleAPI: "https://www.googleapis.com/books/v1/volumes?maxResults=40&q=") as BookSearchDAOProtocol
     }
+    
+    static let localStorageDAO = Factory(scope: .singleton) {
+        SQLiteLocalStorageDAO(databaseType: .file) as LocalStorageDAOProtocol
+    }
 }

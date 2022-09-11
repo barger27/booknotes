@@ -42,6 +42,9 @@
 		94AC290628CD316F00F0C772 /* BookSummaryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AC290528CD316F00F0C772 /* BookSummaryRow.swift */; };
 		94AC290828CD4E2800F0C772 /* BookDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AC290728CD4E2800F0C772 /* BookDetailsView.swift */; };
 		94AC290A28CD561900F0C772 /* RoundedRectangleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AC290928CD561900F0C772 /* RoundedRectangleButtonStyle.swift */; };
+		94AC290D28CD759F00F0C772 /* LocalStorageDAOProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AC290C28CD759F00F0C772 /* LocalStorageDAOProtocol.swift */; };
+		94AC290F28CD75FC00F0C772 /* BookStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AC290E28CD75FC00F0C772 /* BookStatus.swift */; };
+		94AC291128CD765000F0C772 /* SQLiteLocalStorageDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AC291028CD765000F0C772 /* SQLiteLocalStorageDAO.swift */; };
 		94F4EEFD28CAD92200C15E4A /* BookNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F4EEFC28CAD92200C15E4A /* BookNotesApp.swift */; };
 		94F4EEFF28CAD92200C15E4A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F4EEFE28CAD92200C15E4A /* HomeView.swift */; };
 		94F4EF0128CAD92300C15E4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94F4EF0028CAD92300C15E4A /* Assets.xcassets */; };
@@ -82,6 +85,9 @@
 		94AC290528CD316F00F0C772 /* BookSummaryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSummaryRow.swift; sourceTree = "<group>"; };
 		94AC290728CD4E2800F0C772 /* BookDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsView.swift; sourceTree = "<group>"; };
 		94AC290928CD561900F0C772 /* RoundedRectangleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleButtonStyle.swift; sourceTree = "<group>"; };
+		94AC290C28CD759F00F0C772 /* LocalStorageDAOProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageDAOProtocol.swift; sourceTree = "<group>"; };
+		94AC290E28CD75FC00F0C772 /* BookStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStatus.swift; sourceTree = "<group>"; };
+		94AC291028CD765000F0C772 /* SQLiteLocalStorageDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteLocalStorageDAO.swift; sourceTree = "<group>"; };
 		94F4EEF928CAD92200C15E4A /* Book Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F4EEFC28CAD92200C15E4A /* BookNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookNotesApp.swift; sourceTree = "<group>"; };
 		94F4EEFE28CAD92200C15E4A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -114,6 +120,7 @@
 		9440E56028CCE7AB00E66A10 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				94AC290B28CD758300F0C772 /* NotesDAO */,
 				9440E56128CCE7B300E66A10 /* BookSearchDAO */,
 			);
 			path = Data;
@@ -157,6 +164,7 @@
 			children = (
 				9466AFB728CB53540093EB04 /* Book.swift */,
 				9466AFB928CB59520093EB04 /* Note.swift */,
+				94AC290E28CD75FC00F0C772 /* BookStatus.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -253,6 +261,15 @@
 				94AC290728CD4E2800F0C772 /* BookDetailsView.swift */,
 			);
 			path = Controls;
+			sourceTree = "<group>";
+		};
+		94AC290B28CD758300F0C772 /* NotesDAO */ = {
+			isa = PBXGroup;
+			children = (
+				94AC290C28CD759F00F0C772 /* LocalStorageDAOProtocol.swift */,
+				94AC291028CD765000F0C772 /* SQLiteLocalStorageDAO.swift */,
+			);
+			path = NotesDAO;
 			sourceTree = "<group>";
 		};
 		94F4EEF028CAD92200C15E4A = {
@@ -417,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94AC291128CD765000F0C772 /* SQLiteLocalStorageDAO.swift in Sources */,
 				947E2B2428CCB55600970170 /* AddBookView.swift in Sources */,
 				9440E57128CCEE6300E66A10 /* ImageLinksDTO.swift in Sources */,
 				9440E56428CCE8AE00E66A10 /* BookSearchDAOProtocol.swift in Sources */,
@@ -429,10 +447,12 @@
 				9440E56928CCE93A00E66A10 /* GoogleBookSearchDAO.swift in Sources */,
 				9440E56B28CCEB6900E66A10 /* BooksResultDTO.swift in Sources */,
 				947E2B2A28CCBFA600970170 /* BookServiceProtocol.swift in Sources */,
+				94AC290F28CD75FC00F0C772 /* BookStatus.swift in Sources */,
 				9466AFB428CB4B1F0093EB04 /* BookRow.swift in Sources */,
 				94AC290628CD316F00F0C772 /* BookSummaryRow.swift in Sources */,
 				947E2B2C28CCC09E00970170 /* BookNotesBookService.swift in Sources */,
 				947E2B2828CCBED000970170 /* Factory.swift in Sources */,
+				94AC290D28CD759F00F0C772 /* LocalStorageDAOProtocol.swift in Sources */,
 				9466AFB828CB53540093EB04 /* Book.swift in Sources */,
 				9440E56728CCE90700E66A10 /* BookDTO.swift in Sources */,
 				9466AFB628CB51360093EB04 /* HomeViewModel.swift in Sources */,

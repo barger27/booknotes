@@ -10,11 +10,17 @@ import Foundation
 
 class BookNotesBookService : BookServiceProtocol {
     @Injected(Container.bookSearchDAO) var bookSearchDAO:BookSearchDAOProtocol
+    @Injected(Container.localStorageDAO) var localStorageDAO:LocalStorageDAOProtocol
     
     init() { }
     
     init(bookSearchDAO: BookSearchDAOProtocol) {
         self.bookSearchDAO = bookSearchDAO
+    }
+    
+    func saveBook(book: Book) async throws {
+        var editableBook = book
+        localStorageDAO.saveBook(book: &editableBook)
     }
     
     func searchBook(searchString: String) async throws -> [Book] {

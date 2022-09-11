@@ -8,13 +8,18 @@
 import Foundation
 import SwiftDate
 
-class MockBookService : BookServiceProtocol {   
+class MockBookService : BookServiceProtocol {
     private(set) var searchBookCalls = 0
     
     func searchBook(searchString:String) async throws -> [Book] {
         searchBookCalls += 1
         
         return MockBookService.defaultBooks
+    }
+    
+    
+    func saveBook(book: Book) async throws {
+        // Do nothing
     }
     
     
