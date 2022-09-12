@@ -40,8 +40,8 @@ struct HomeView: View {
             }
             .navigationBarHidden(true)
             .navigationTitle("Book Library")
-            .onAppear {
-                viewModel.loadBooks()
+            .task {
+                await viewModel.loadBooks()
             }
         }
     }

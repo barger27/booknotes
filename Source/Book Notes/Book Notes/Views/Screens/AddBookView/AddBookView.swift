@@ -41,10 +41,14 @@ struct AddBookView: View {
                     viewModel.deselectBook()
                 }
                 .onReadNow {
-                    viewModel.addSelectedBookToReadNow()
+                    Task {
+                        let _ = await viewModel.addSelectedBookToReadNow()
+                    }
                 }
                 .onWishlist {
-                    viewModel.addSelectedBookToWishlist()
+                    Task {
+                        let _ = await viewModel.addSelectedBookToWishlist()
+                    }
                 }
         }
     }

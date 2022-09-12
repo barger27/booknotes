@@ -10,6 +10,7 @@ import SwiftDate
 
 class MockBookService : BookServiceProtocol {
     private(set) var searchBookCalls = 0
+    private(set) var saveBookCalls = 0
     
     func searchBook(searchString:String) async throws -> [Book] {
         searchBookCalls += 1
@@ -19,7 +20,7 @@ class MockBookService : BookServiceProtocol {
     
     
     func saveBook(book: Book) async throws {
-        // Do nothing
+        saveBookCalls += 1
     }
     
     func loadAllBooks() async throws -> (active: [Book], wishlist: [Book], archived: [Book]) {
@@ -49,7 +50,8 @@ class MockBookService : BookServiceProtocol {
              publishedDate: Date(year: 2020, month: 3, day: 16, hour: 0, minute: 0),
              pageCount: 168,
              bookCoverURL: nil,
-             bookCoverThumbnail: nil),
+             bookCoverThumbnail: nil,
+             status: .readList),
         
         Book(id: "t1TbDwAAQBAJ",
              title: "Learn SwiftUI",
@@ -60,7 +62,8 @@ class MockBookService : BookServiceProtocol {
              publishedDate: Date(year: 2020, month: 4, day: 3, hour: 0, minute: 0),
              pageCount: 316,
              bookCoverURL: URL(string: "http://books.google.com/books/content?id=t1TbDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
-             bookCoverThumbnail: URL(string: "http://books.google.com/books/content?id=t1TbDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api")),
+             bookCoverThumbnail: URL(string: "http://books.google.com/books/content?id=t1TbDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"),
+             status: .wishlist),
         
         Book(id: "hfL0DwAAQBAJ",
              title: "SwiftUI For Dummies",
@@ -86,7 +89,8 @@ class MockBookService : BookServiceProtocol {
              publishedDate: Date(year: 2020, month: 9, day: 9, hour: 0, minute: 0),
              pageCount: 416,
              bookCoverURL: URL(string: "http://books.google.com/books/content?id=hfL0DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
-             bookCoverThumbnail: URL(string: "http://books.google.com/books/content?id=hfL0DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api")),
+             bookCoverThumbnail: URL(string: "http://books.google.com/books/content?id=hfL0DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"),
+             status: .wishlist),
         
         Book(id: "hmupzgEACAAJ",
              title: "SwiftUI Cookbook",
@@ -135,7 +139,8 @@ class MockBookService : BookServiceProtocol {
              publishedDate: Date(year: 2021, month: 11, day: 1, hour: 0, minute: 0),
              pageCount: 616,
              bookCoverURL: URL(string: "http://books.google.com/books/content?id=hmupzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"),
-             bookCoverThumbnail: URL(string: "http://books.google.com/books/content?id=hmupzgEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api")),
+             bookCoverThumbnail: URL(string: "http://books.google.com/books/content?id=hmupzgEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"),
+             status: .wishlist),
         
         Book(id: "mJ1jEAAAQBAJ",
              title: "SwiftUI for Masterminds 2nd Edition 2022",
@@ -166,6 +171,7 @@ class MockBookService : BookServiceProtocol {
              publishedDate: Date(year: 2022, month: 3, day: 10, hour: 0, minute: 0),
              pageCount: 800,
              bookCoverURL: URL(string: "http://books.google.com/books/content?id=mJ1jEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
-             bookCoverThumbnail: URL(string: "http://books.google.com/books/content?id=mJ1jEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"))
+             bookCoverThumbnail: URL(string: "http://books.google.com/books/content?id=mJ1jEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"),
+             status: .archived)
     ]
 }

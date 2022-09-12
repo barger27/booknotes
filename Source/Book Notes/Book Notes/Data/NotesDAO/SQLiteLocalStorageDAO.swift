@@ -91,6 +91,13 @@ class SQLiteLocalStorageDAO : LocalStorageDAOProtocol {
                 }
             }
             
+            migrator.registerMigration("addBookColumns") { db in
+                try db.alter(table: "book") { table in
+                    table.add(column: "averageRating", .double)
+                    table.add(column: "ratingResponses", .integer)
+                }
+            }
+            
             try migrator.migrate(database)
         } catch let error {
             print("Error setting up tables")

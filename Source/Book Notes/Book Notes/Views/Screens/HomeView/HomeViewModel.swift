@@ -9,7 +9,7 @@ import Factory
 import Foundation
 
 extension HomeView {
-    @MainActor
+
     class ViewModel: ObservableObject {
         @Injected(Container.bookService) var bookService:BookServiceProtocol
         
@@ -19,16 +19,20 @@ extension HomeView {
         @Published var wishlistBooks:[Book] = []
         @Published var archivedBooks:[Book] = []
         
+        init() {}
         
-        func loadBooks() {
-            Task {
-                do {
-                    (active: activeBooks,
-                     wishlist: wishlistBooks,
-                     archived: archivedBooks) = try await bookService.loadAllBooks()
-                } catch let error {
-                    print("Error loading books: \(error)")
-                }
+        init(bookService:BookServiceProtocol) {
+            self.bookService = bookService
+        }
+        
+        @MainActor
+        func loadBooks() async {
+            do {
+                (active: activeBooks,
+                 wishlist: wishlistBooks,
+                 archived: archivedBooks) = try await bookService.loadAllBooks()
+            } catch let error {
+                print("Error loading books: \(error)")
             }
         }
     }

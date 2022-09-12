@@ -14,8 +14,9 @@ class BookNotesBookService : BookServiceProtocol {
     
     init() { }
     
-    init(bookSearchDAO: BookSearchDAOProtocol) {
+    init(bookSearchDAO: BookSearchDAOProtocol, localStorageDAO:LocalStorageDAOProtocol) {
         self.bookSearchDAO = bookSearchDAO
+        self.localStorageDAO = localStorageDAO
     }
     
     func loadAllBooks() async throws -> (active: [Book], wishlist: [Book], archived: [Book]) {

@@ -9,7 +9,7 @@ import Factory
 import Foundation
 
 extension AddBookView {
-    @MainActor
+    
     class ViewModel: ObservableObject {
         // Services
         @Injected(Container.bookService) private var bookService
@@ -53,38 +53,36 @@ extension AddBookView {
             isBookDetailsPresented = false
         }
         
-        
-        func addSelectedBookToReadNow() {
-            guard var book = selectedBook else { return }
+        @MainActor
+        func addSelectedBookToReadNow() async -> Book? {
+            guard var book = selectedBook else { return nil }
             book.status = .readList
             
-            Task {
-                do {
-                    try await bookService.saveBook(book: book)
-                } catch let error {
-                    print("Unable to save book")
-                    print(error)
-                }
+            do {
+                try await bookService.saveBook(book: book)
+            } catch let error {
+                print("Unable to save book")
+                print(error)
             }
             
             deselectBook()
+            return book
         }
         
-        
-        func addSelectedBookToWishlist() {
-            guard var book = selectedBook else { return }
+        @MainActor
+        func addSelectedBookToWishlist() async -> Book? {
+            guard var book = selectedBook else { return nil }
             book.status = .wishlist
             
-            Task {
-                do {
-                    try await bookService.saveBook(book: book)
-                } catch let error {
-                    print("Unable to save book")
-                    print(error)
-                }
+            do {
+                try await bookService.saveBook(book: book)
+            } catch let error {
+                print("Unable to save book")
+                print(error)
             }
             
             deselectBook()
+            return book
         }
         
         
