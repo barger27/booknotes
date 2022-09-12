@@ -46,7 +46,7 @@ class GoogleBookSearchDAO : BookSearchDAOProtocol {
     private func sanitizeURL(url:String) -> String {
         // full disclosure... This came from a Stack Overflow answer
         // https://stackoverflow.com/questions/24551816/swift-encode-url
-        let customAllowedSet =  CharacterSet(charactersIn: "=\"#%/<>?@\\^`{|}").inverted
+        let customAllowedSet =  CharacterSet(charactersIn: "=\"#%/<>?@\\^`{|} ").inverted
         let escapedString = url.addingPercentEncoding(withAllowedCharacters: customAllowedSet)
         
         return escapedString ?? url
